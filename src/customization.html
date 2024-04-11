@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Update your description here" />
+	<title> Designing Victory </title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/phx3rfz.css">
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script src="js/fonts.js"></script>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css">
+
+</head>
+
+<body>
+	<main class="content-container">
+		<h1 class="heading"> Victory is ____________ </h1>
+		<img class="preview" src="images/jersey.svg" alt="custom jersey preview">
+		<h2> Color </h2>
+		<!-- I got help to code this color picker section with Professor K's reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color-->
+		<section>
+			<input type="color" class="color-picker" name="color" value="#FF5F5F" />
+		</section>
+
+		<h2> Font </h2>
+
+		<!-- This font-picker, HiGoogleFonts was found on github (https://github.com/saadqbal/HiGoogleFonts?tab=readme-ov-file), see the copyright and license below:
+		Copyright 2016 Hiwaas, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.-->
+		<script type="text/javascript">
+			$(document).ready(function () {
+
+				$("#select_fontfamily").higooglefonts({
+					selectedCallback: function (e) {
+						console.log(e);
+					},
+					loadedCallback: function (font) {
+						console.log(font);
+						/*/////// This is where you should apply font.///////
+						/////////////////////////////////////////////////////*/
+						$("#paragraph").css("font-family", font); // Change the font-family of the #paragraph
+					}
+				});
+
+			});
+
+		</script>
+
+		<h2> Number </h2>
+		<select class="1-100"></select>
+		<h2> Pattern </h2>
+		<img class="pattern" src="images/pattern1.png" alt="blue check pattern">
+		<img class="pattern" src="images/pattern2.png" alt="yellow warp checker pattern">
+		<img class="pattern" src="images/pattern3.png" alt="orange warp check pattern">
+		<img class="pattern" src="images/pattern4.png" alt="green warp checker pattern">
+		<img class="pattern" src="images/pattern5.png" alt="yellow flower pattern">
+		<img class="pattern" src="images/pattern6.png" alt="pink heart pattern">
+		<img class="pattern" src="images/pattern7.png" alt="purple butterfly pattern">
+		<img class="pattern" src="images/pattern8.png" alt="green flower pattern">
+
+
+		<button type="button" id="reset"> Reset </button>
+		<a href="product.html">
+			<button type="button" id="done"> Done </button>
+		</a>
+	</main>
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>
