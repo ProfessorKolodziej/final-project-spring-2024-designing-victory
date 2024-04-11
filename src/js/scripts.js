@@ -12,3 +12,11 @@ $(function () {
 		$select.append($('<option></option>').val(i).html(i))
 	}
 });
+
+//I think I need more time to figure out the JS part of this coding to finalize the html so this is placeholder
+const color = "Red";
+const font = "Arial";
+
+console.log(color);
+console.log(color);
+
