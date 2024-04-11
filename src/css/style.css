@@ -5,9 +5,18 @@ Try changing the color from blue to red in the
 primary color variable below.
 */
 
+/*
 :root {
-	/*background-color: #242424;*/
+	background-color: #242424;
+}
+*/
+
+h1 {
 	text-align: center;
+}
+
+img.pattern {
+	max-width: 20%;
 }
 
 /*

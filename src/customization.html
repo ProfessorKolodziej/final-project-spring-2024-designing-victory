@@ -39,6 +39,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.-->
+		<!--
 		<script type="text/javascript">
 			$(document).ready(function () {
 
@@ -57,28 +58,26 @@ Unless required by applicable law or agreed to in writing, software distributed 
 			});
 
 		</script>
+		-->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var selectFont = document.getElementById("select_fontfamily");
+				var paragraph = document.getElementById("paragraph");
+
+				selectFont.addEventListener("change", function () {
+					var selectedFont = this.value;
+					applyFont(selectedFont);
+				});
+
+				function applyFont(font) {
+					paragraph.style.fontFamily = font;
+				}
+			});
+		</script>
 
 		<!-- I got this HTML and corresponding JS code from https://jsfiddle.net/Curt/preYN/-->
 		<h2> Number </h2>
 		<!-- <select class="1-100"></select> -->
-		<!--
-		<div>
-			<input type="range" id="volume" name="volume" min="0" max="11" />
-			<label for="volume">Volume</label>
-		</div>
-	-->
-		<!--
-		<select name="pets" id="pet-select">
-			<option value="">--Please choose an option--</option>
-			<option value="dog">1</option>
-			<option value="cat">2</option>
-			<option value="hamster">3</option>
-			<option value="parrot">4</option>
-			<option value="spider">5</option>
-			<option value="goldfish">6</option>
-		</select>
-	-->
-
 
 		<input type="number" id="number" min="1" max="100" />
 
@@ -91,6 +90,10 @@ Unless required by applicable law or agreed to in writing, software distributed 
 		<img class="pattern" src="images/pattern6.png" alt="pink heart pattern">
 		<img class="pattern" src="images/pattern7.png" alt="purple butterfly pattern">
 		<img class="pattern" src="images/pattern8.png" alt="green flower pattern">
+
+		<br>
+		<br>
+		<br>
 
 		<button type="button" id="reset"> Reset </button>
 		<a href="product.html">
