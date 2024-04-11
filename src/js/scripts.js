@@ -14,12 +14,17 @@ $(function () {
 });
 
 //I think I need more time to figure out the JS part of this coding to finalize the html so this is placeholder
-colorPicker.addEventListener("input", updateFirst, false);
-colorPicker.addEventListener("change", watchColorPicker, false);
+// Event listener for the reset button
+$("#reset").on("click", function () {
+	// Reset color picker to default value
+	$(".color-picker").val("#FF5F5F");
 
-function watchColorPicker(event) {
-	document.querySelectorAll("p").forEach((p) => {
-		p.style.color = event.target.value;
-	});
-}
-colorPicker.select();
+	// Reset font picker to default value (if applicable)
+	// Reset font-family of paragraph to default (if applicable)
+
+	// Reset number select to default value
+	$(".1-100").val("1");
+
+	// Reset pattern selection to default (if applicable)
+	// Reset jersey preview image to default pattern (if applicable)
+});
