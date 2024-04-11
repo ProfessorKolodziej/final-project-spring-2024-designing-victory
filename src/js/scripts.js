@@ -14,9 +14,12 @@ $(function () {
 });
 
 //I think I need more time to figure out the JS part of this coding to finalize the html so this is placeholder
-const color = "Red";
-const font = "Arial";
+colorPicker.addEventListener("input", updateFirst, false);
+colorPicker.addEventListener("change", watchColorPicker, false);
 
-console.log(color);
-console.log(color);
-
+function watchColorPicker(event) {
+	document.querySelectorAll("p").forEach((p) => {
+		p.style.color = event.target.value;
+	});
+}
+colorPicker.select();
