@@ -106,3 +106,13 @@ function reset() {
 	textElement.textContent = "";
 
 }
+
+//Button to customization page
+document.getElementById("customization-link").addEventListener("click", function () {
+	window.location.href = "customization.html";
+});
+
+//Done button
+document.getElementById("done").addEventListener("click", function () {
+	window.location.href = "product.html";
+});
