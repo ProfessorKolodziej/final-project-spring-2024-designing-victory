@@ -110,6 +110,41 @@ sl-input {
 	gap: 10px;
 }
 
+/* SVG styling */
+.cls-1 {
+	font-size: 228.2px;
+}
+
+.cls-1,
+.cls-2,
+.cls-3 {
+	fill: #fff;
+}
+
+.cls-1,
+.cls-3 {
+	font-family: MyriadPro-Regular, 'Myriad Pro';
+	isolation: isolate;
+}
+
+.cls-4 {
+	fill: #ef5046;
+}
+
+.cls-4,
+.cls-5,
+.cls-2 {
+	stroke-width: 0px;
+}
+
+.cls-5 {
+	fill: #212121;
+}
+
+.cls-3 {
+	font-size: 72.4px;
+}
+
 /*
 CSS doesn't allow variables to be used in media
 queries just yet, but you can use these values
