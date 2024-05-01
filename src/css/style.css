@@ -27,17 +27,31 @@ body {
 }
 
 
-h1 {
+.intro {
 	text-align: center;
 	font-family: "VTCSpikeTrial", sans-serif;
 	color: white;
-	font-size: 90px
+	font-size: 70px;
+	padding-top: 40%;
+}
+
+.heading {
+	text-align: center;
+	font-family: "VTCSpikeTrial", sans-serif;
+	color: white;
+	font-size: 60px;
+}
+
+.blank {
+	color: #ef5046;
+	text-transform: uppercase;
 }
 
 h2 {
 	color: white;
 	font-family: "neue-haas-grotesk-display", sans-serif;
 	margin-top: 5%;
+
 }
 
 svg {
@@ -50,11 +64,12 @@ svg {
 
 sl-input {
 	width: 30%;
+	margin-top: 10px;
 }
 
-#customization-link {
+.customization-link {
 	background-color: #ffffff;
-	max-width: 60%;
+	max-width: 90%;
 	border: none;
 	color: #212121;
 	padding: 8px 5px;
@@ -67,9 +82,33 @@ sl-input {
 	font-family: "neue-haas-grotesk-display", sans-serif;
 	font-size: 20px;
 	font-weight: 600;
+	margin-bottom: 10%;
+}
+
+.customization-link:hover {
+	background-color: #ef5046;
+}
+
+#about-link {
+	color: white;
+	padding: 8px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 30px;
+	display: block;
+	margin: auto;
+	font-family: "neue-haas-grotesk-display", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+#about-link:hover {
+	color: #ef5046;
 }
 
 #reset,
+.home-link,
 #done {
 	background-color: #ffffff;
 	border: none;
@@ -78,24 +117,55 @@ sl-input {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 10px;
+	font-size: 20px;
 	border-radius: 30px;
 	font-family: "neue-haas-grotesk-display", sans-serif;
 	font-weight: 600;
+	align-items: left;
 }
 
-#customization-link:focus {
+#share,
+#save {
+	background-color: #ffffff;
+	border: none;
+	color: #212121;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	border-radius: 30px;
+	font-family: "neue-haas-grotesk-display", sans-serif;
+	font-weight: 600;
+	align-items: left;
+}
+
+
+.home-link:hover {
 	background-color: #ef5046;
 }
 
 .intro {
-	margin-top: 60%;
+	margin-top: 20%;
 }
 
-.buttons-container {
+/*
+.color-picker {
+	margin-left: 20%;
+}
+*/
+.buttons-container1 {
 	margin-top: 10px;
 	text-align: right;
 	margin-bottom: 7%;
+	margin-right: 0;
+}
+
+.buttons-container2 {
+	margin-top: 10px;
+	text-align: center;
+	margin-bottom: 7%;
+	margin-right: 10%;
 }
 
 .buttons-container button {
@@ -103,28 +173,29 @@ sl-input {
 	margin-right: 2%;
 }
 
-.color-picker-container,
-.color-name {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
+/*
+#font-picker {
+	margin-left: 20%;
 }
+*/
 
 /* SVG styling */
+
 .cls-1 {
-	font-size: 228.2px;
+	font-size: 60px;
 }
 
 .cls-1,
 .cls-2,
 .cls-3 {
 	fill: #fff;
+	text-transform: uppercase;
 }
 
 .cls-1,
 .cls-3 {
-	font-family: MyriadPro-Regular, 'Myriad Pro';
-	isolation: isolate;
+	font-family: VTCSpikeTrial-Bold, 'VTC Spike Trial';
+	font-weight: 700;
 }
 
 .cls-4 {
@@ -141,9 +212,46 @@ sl-input {
 	fill: #212121;
 }
 
-.cls-3 {
-	font-size: 72.4px;
+.cls-6 {
+	isolation: isolate;
 }
+
+.cls-3 {
+	font-size: 200px;
+}
+
+#jersey-preview {
+	max-width: 70%;
+}
+
+.welcome {
+	font-family: "VTCSpikeTrial", sans-serif;
+	color: white;
+	font-size: 40px;
+	text-align: left;
+}
+
+.welcome-intro {
+	color: white;
+	font-size: 15px;
+	font-family: "neue-haas-grotesk-display", sans-serif;
+	font-weight: 300;
+	padding-bottom: 10%;
+}
+
+.about-body {
+	margin: 5%;
+}
+
+.custom-options {
+	margin: 0% 15%10% 15%;
+}
+
+.color-picker__grid {
+	align-items: center;
+}
+
+
 
 /*
 CSS doesn't allow variables to be used in media
@@ -165,16 +273,139 @@ h1 {
 /* This uses the same value as --size-xs. */
 
 /* tablet sizing */
-@media screen and (min-width:321px) and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 	.content-container {
 		margin: 0 auto;
 		max-width: 768px;
 	}
+
+	.intro {
+		font-size: 70px;
+		padding-top: 20%;
+	}
+
+	.color-picker-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+		margin-bottom: 0;
+		font-size: 15px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.color-picker-container3 {
+		margin-left: 0;
+	}
+
+	.number-font-container {
+		display: grid;
+		grid-template-columns: repeat(2, 0.5 fr);
+		gap: 0px;
+		margin-left: 10px;
+	}
+
+	.custom-options {
+		margin: 0 2%;
+	}
+
+	.custom-options {
+		margin-left: 13%;
+		margin-top: 5%;
+	}
+
+	.welcome {
+		font-family: "VTCSpikeTrial", sans-serif;
+		color: white;
+		font-size: 50px;
+		text-align: left;
+	}
+
+	.welcome-intro {
+		color: white;
+		font-size: 20px;
+		font-family: "neue-haas-grotesk-display", sans-serif;
+		font-weight: 300;
+		padding-bottom: 10%;
+	}
+
+	.about-body {
+		margin: 0% 8%;
+	}
+
+	.color-picker {
+		max-width: 20%;
+	}
+
+	.second-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 40px;
+	}
 }
 
 /* desktop sizing */
-@media screen and (min-width: 768px) {
-	button:hover {
-		background-color: #ef5046;
+@media screen and (min-width: 1024px) {
+
+	.intro {
+		font-size: 120px;
+		padding-top: 0px;
+	}
+
+	.customization-link {
+		max-width: 30%;
+		margin-bottom: 0;
+	}
+
+	.heading {
+		font-size: 100px;
+	}
+
+	.welcome {
+		font-family: "VTCSpikeTrial", sans-serif;
+		color: white;
+		font-size: 100px;
+		text-align: left;
+	}
+
+	.welcome-intro {
+		color: white;
+		font-size: 25px;
+		font-family: "neue-haas-grotesk-display", sans-serif;
+		font-weight: 300;
+		padding-bottom: 5%;
+	}
+
+	.about-body {
+		margin: 0% 10%;
+	}
+
+	#jersey-layout {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-right: 100px;
+
+	}
+
+	.content-container {
+		max-width: 100%;
+	}
+
+	#jersey-preview {
+		max-width: 70%;
+		margin-top: 10%;
+		display: block;
+	}
+
+	.custom-options {
+		margin-left: 0;
+	}
+
+	#font-picker {
+		margin-bottom: 200px;
+	}
+
+	.button-container {
+		margin-left: 10px;
 	}
 }

@@ -40,7 +40,7 @@ PipingColorPicker3.addEventListener("sl-change", function () {
 const fontPicker = new FontPicker(
 	"AIzaSyDeMLqmgHk4H2Q9TsFzOtQdbevzXDEVDLE", // Google API key
 	"Open Sans", // Default font
-	{ limit: 50 }, // Additional options
+	{ limit: 100 }, // Additional options
 );
 
 //showing typed word on jersey preview - functioning
@@ -99,20 +99,31 @@ numberInput.addEventListener('input', function () {
 });
 
 //reset button
-const resetButton = document.querySelector('#reset');
-resetButton.addEventListener('click', reset)
-function reset() {
-	editableSpan.textContent = "";
-	textElement.textContent = "";
+//const resetButton = document.querySelector('#reset');
+//resetButton.addEventListener('click', reset)
+//function reset() {
+//editableSpan.textContent = "";
+//textElement.textContent = "";
+//}
 
-}
+//home button
+document.getElementById("home").addEventListener("click", function () {
+	window.location.href = "index.html";
+});
 
 //Button to customization page
 document.getElementById("customization-link").addEventListener("click", function () {
 	window.location.href = "customization.html";
 });
 
-//Done button
-document.getElementById("done").addEventListener("click", function () {
-	window.location.href = "product.html";
-});
+//done button to hide the custom options
+const productResult = document.querySelector(".custom-options")
+
+function productResult() {
+	productResult.classList.toggle("hide")
+}
+
+const productButton = document.querySelector("#toggle-control");
+
+productButton.addEventListener("click", productResult);
+
