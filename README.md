@@ -8,7 +8,8 @@ Please add a brief description of your final project here.
 
 - [CM523 Final Project Guidelines &amp; Schedule](https://docs.google.com/document/d/1gvG9_1XYfp5-BVUgCDL9JDaZ3Acm6hHP7lDF3MqXPzY/edit#heading=h.61wsleacz62i)
 - https://professorkolodziej.github.io/final-project-spring-2024-designing-victory
-- Add any links to wireframes, mockups, your presentation, etc. here in a list so it is easy for you to find later.
+- https://www.figma.com/file/wLdcPEaL2M1HEEiM5aqH5V/Final-Project-Prototype?type=design&node-id=0%3A1&mode=design&t=2WrxoyUSnf1AoWWD-1
+- https://docs.google.com/presentation/d/1JvcHhl5TkZ0HZxqHWoBnoHGd7vt_gGbmNR49n24iY9c/edit#slide=id.g2d17f2607e1_0_105
 
 ## How to Use This Repository
 
