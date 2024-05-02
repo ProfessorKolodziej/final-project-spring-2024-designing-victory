@@ -1,8 +1,8 @@
-# Final Project (Replace with your project name)
+# Designing Victory
 
-## Description
+## "Designing Victory," explores the intersection of sports, design, and technology by offering sports fans an interactive experience to customize their own basketball jerseys. Beyond the realm of mere competition, sports symbolize unity, excitement, and personal victories. 
+By letting users create their own jerseys that reflect what victory means to them, this project aims to honor the diverse stories and meanings that make up the sports world.
 
-Please add a brief description of your final project here.
 
 ## Project Documentation
 
