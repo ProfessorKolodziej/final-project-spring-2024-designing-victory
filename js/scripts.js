@@ -129,6 +129,25 @@ if (customBtn !== null) {
 	});
 }
 
+//home button
+const homeButton = document.getElementById("homeButton");
+
+// Hover effects
+homeButton.addEventListener("mouseover", function () {
+	// Change background color on mouseover
+	this.style.backgroundColor = "#ffffff";
+	this.style.color = "#212121";
+});
+homeButton.addEventListener("mouseout", function () {
+	// Change background color back to default on mouseout
+	this.style.backgroundColor = "#ef5046";
+	this.style.color = "#ffffff";
+});
+
+homeButton.addEventListener("click", function () {
+	window.location.href = "index.html";
+});
+
 
 //done button to hide the custom options
 function toggleCustomOptions() {
@@ -138,28 +157,32 @@ function toggleCustomOptions() {
 const doneButton = document.querySelector("#done");
 doneButton.addEventListener("click", toggleCustomOptions);
 
-//share and save button
+//share, save, home button after clicking done button
 document.getElementById("done").addEventListener("click", function () {
 	var customOptions = document.querySelector(".custom-options");
-	var shareButton = document.getElementById("shareButton");
+	//var shareButton = document.getElementById("shareButton");
 	var saveButton = document.getElementById("saveButton");
+	var homeButton = document.getElementById("homeButton");
 
 	// Toggle visibility of share and save buttons when "Done" button is clicked
-	if (shareButton.style.display === "none" || shareButton.style.display === "") {
-		shareButton.style.display = "inline-block";
+	if (saveButton.style.display === "none" || saveButton.style.display === "") {
+		//if (shareButton.style.display === "none" || shareButton.style.display === "") {
+		//	shareButton.style.display = "inline-block";
 		saveButton.style.display = "inline-block";
+		homeButton.style.display = "inline-block";
 		// Apply styling to share and save buttons
-		shareButton.style.backgroundColor = "#ffffff";
-		shareButton.style.border = "none";
-		shareButton.style.color = "#212121";
-		shareButton.style.padding = "8px 15px";
-		shareButton.style.textAlign = "center";
-		shareButton.style.textDecoration = "none";
-		shareButton.style.fontSize = "20px";
-		shareButton.style.borderRadius = "30px";
-		shareButton.style.fontFamily = "neue-haas-grotesk-display, sans-serif";
-		shareButton.style.fontWeight = "600";
-		shareButton.style.alignItems = "left";
+		//shareButton.style.backgroundColor = "#ffffff";
+		//shareButton.style.border = "none";
+		//shareButton.style.color = "#212121";
+		//shareButton.style.padding = "8px 15px";
+		//shareButton.style.textAlign = "center";
+		//shareButton.style.textDecoration = "none";
+		//shareButton.style.fontSize = "20px";
+		//shareButton.style.borderRadius = "30px";
+		//shareButton.style.fontFamily = "neue-haas-grotesk-display, sans-serif";
+		//shareButton.style.fontWeight = "600";
+		//shareButton.style.alignItems = "center";
+		//shareButton.style.marginTop = "50px";
 
 		saveButton.style.backgroundColor = "#ffffff";
 		saveButton.style.border = "none";
@@ -171,9 +194,46 @@ document.getElementById("done").addEventListener("click", function () {
 		saveButton.style.borderRadius = "30px";
 		saveButton.style.fontFamily = "neue-haas-grotesk-display, sans-serif";
 		saveButton.style.fontWeight = "600";
-		saveButton.style.alignItems = "left";
+		saveButton.style.alignItems = "center";
+		saveButton.style.marginTop = "50px";
+		saveButton.style.marginLeft = "10px";
+
+		homeButton.style.backgroundColor = "#ef5046";
+		homeButton.style.border = "none";
+		homeButton.style.color = "#ffffff";
+		homeButton.style.padding = "8px 15px";
+		homeButton.style.textAlign = "center";
+		homeButton.style.textDecoration = "none";
+		homeButton.style.fontSize = "15px";
+		homeButton.style.borderRadius = "30px";
+		homeButton.style.fontFamily = "neue-haas-grotesk-display, sans-serif";
+		homeButton.style.fontWeight = "600";
+		homeButton.style.alignItems = "center";
+		homeButton.style.marginTop = "70px";
+
 	} else {
-		shareButton.style.display = "none";
+		//	shareButton.style.display = "none";
 		saveButton.style.display = "none";
+		homeButton.style.display = "none";
 	}
 });
+
+
+
+//save button
+const saveButton = document.getElementById("saveButton");
+saveButton.addEventListener("click", () => {
+	const jerseyPreview = document.getElementById("jersey-preview");
+	const svgData = new XMLSerializer().serializeToString(jerseyPreview);
+	const blob = new Blob([svgData], { type: "image/svg+xml" });
+	const url = URL.createObjectURL(blob);
+	const a = document.createElement("a");
+	a.href = url;
+	a.download = "custom_jersey.svg"; // Set the file name for download
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+	URL.revokeObjectURL(url);
+	resultPara.textContent = "Jersey saved successfully";
+});
+
